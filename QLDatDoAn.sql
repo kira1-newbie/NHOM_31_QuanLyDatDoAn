@@ -1,4 +1,5 @@
-﻿CREATE DATABASE dbQuanLyDatDoAn;
+﻿
+create database dbQuanLyDatDoAn;
 GO
 USE dbQuanLyDatDoAn;
 GO
@@ -18,7 +19,7 @@ CREATE TABLE NguoiDung (
     HoTen NVARCHAR(100) NOT NULL,
     Email NVARCHAR(100) UNIQUE NOT NULL,
     SoDienThoai VARCHAR(15) NOT NULL,
-    MatKhau NVARCHAR(255) NOT NULL, -- Chỉ lưu Hash, Java sẽ check
+    MatKhau NVARCHAR(255) NOT NULL, 
     TrangThai NVARCHAR(20) DEFAULT N'HOẠT ĐỘNG', 
     FOREIGN KEY (RoleId) REFERENCES Role(RoleId)
 );
@@ -261,8 +262,8 @@ INSERT INTO NguoiDung VALUES
 ('ND00005',3,N'Shipper Hùng','ship1@gmail.com','0905000005','123456',N'HOẠT ĐỘNG'),
 ('ND00006',3,N'Shipper Tùng','ship2@gmail.com','0905000006','123456',N'HOẠT ĐỘNG'),
 
-('ND00007',4,N'Chủ quán Cơm Tấm','comtam@gmail.com','0905000007','123456',N'HOẠT ĐỘNG'),
-('ND00008',4,N'Chủ quán Trà Sữa','trasua@gmail.com','0905000008','123456',N'HOẠT ĐỘNG');
+('ND00007',4,N'Quán Cơm Tấm','comtam@gmail.com','0905000007','123456',N'HOẠT ĐỘNG'),
+('ND00008',4,N'Quán Trà Sữa','trasua@gmail.com','0905000008','123456',N'HOẠT ĐỘNG');
 INSERT INTO QuanAn VALUES
 ('QA00001','ND00007',N'Cơm tấm Sài Gòn',N'12 Nguyễn Văn Linh, Đà Nẵng'),
 ('QA00002','ND00008',N'Trà sữa Chill',N'89 Lê Duẩn, Đà Nẵng');
